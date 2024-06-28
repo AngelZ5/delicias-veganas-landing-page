@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <title>Delicias Veganas</title>
     <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
     <link rel="stylesheet" href="./src/css/output.css">
+    <script>document.documentElement.classList.add('js')</script>
 
     <style>
         .animated-container {
@@ -22,24 +23,48 @@
             animation: moveUpAndDown 3s ease-in-out infinite;
         }
 
+
         @keyframes moveUpAndDown {
             0% {
                 transform: translateY(0);
             }
 
             50% {
-                transform: translateY(-20px);
+                transform: translateY(-15px);
             }
 
             100% {
+                transform: translateY(5);
+            }
+        }
+
+        @keyframes jump {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateY(0);
             }
+
+            40% {
+                transform: translateY(-30px);
+            }
+
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .jump {
+            animation: jump 2s ease;
         }
     </style>
 
 </head>
 
-<body class="bg-zinc-600 text-white m-0 h-screen">
+<body class="bg-zinc-600 text-white m-0 h-screen overflow-x-hidden">
     <header>
         <nav class="flex items-center justify-between p-4 shadow-md w-full bg-zinc-500 transition-all duration-500">
             <a href="#">
@@ -67,7 +92,8 @@
     </header>
     <section class="flex justify-left items-center ml-52">
         <div class="block justify-left items-center">
-            <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas:</span> Receitas Fáceis e <span
+            <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas<span
+                        class="text-white">:</span></span> Receitas Fáceis e <span
                     class="text-green-400">Nutritivas</span></h2>
             <p class="font-bold tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e
                 saudáveis que
@@ -79,14 +105,41 @@
             <button
                 class="bg-gray-500 text-stone-200 rounded-lg w-52 text-2xl mt-5 h-11 hover:text-green-400 hover:tracking-widest hover:bg-gray-600 hover:w-60 transition-all duration-500">Saiba
                 Mais</button>
+            <div class="w-52 mt-28 mb-14">
+                <p id="number">00</p>
+            </div>
         </div>
         <aside>
-            <div class="w-80 rotate-3 absolute right-52 top-0 mt-44 animated-container">
-                <img src="./src/images/Capa do Ebook DelÍcias Veganas.png" alt="" class="animated-image">
+            <div class="w-80 ml-20 mt-36 animated-container delay-[300ms] duration-[600ms] taos:translate-x-[200px] taos:opacity-0"
+                data-taos-offset="400">
+                <img src=" ./src/images/Capa do Ebook DelÍcias Veganas.png" alt="" class="animated-image">
             </div>
         </aside>
     </section>
+    <section class="flex justify-center items-center ">
+        <button><a href=""><img
+                    class="bg-gray-500 rounded-lg animate-bounce hover:bg-gray-400 transition-all duration-300"
+                    src="./src/images/Down arrow.png" alt=""></a></button>
+    </section>
+    <hr class="mt-3">
+    <section>
+        <p class="text-4xl ml-52 text-green-400 mt-8 ">Sobre o Ebook<span class="text-white">:</span></p>
+        <div class="ml-52 mt-4 text-2xl">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum unde possimus aspernatur totam sunt sequi
+                nisi minima nesciunt laborum! Pariatur consectetur sed ipsa natus nulla vero minus quis aut eaque
+                voluptatum mollitia commodi repudiandae unde repellendus, deleniti voluptates error dignissimos nostrum
+                voluptatem, beatae eveniet exercitationem, fuga esse cupiditate. Asperiores aperiam inventore, ea nam
+                velit veniam libero sunt maiores voluptatibus numquam deserunt culpa illo nemo quis maxime sed ullam
+                adipisci hic praesentium delectus ab. Pariatur, recusandae, voluptate cumque unde quia assumenda dolores
+                eum beatae alias voluptatum, esse dicta quos commodi maiores.</p>
 
+        </div>
+
+    </section>
+
+
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>
