@@ -7,9 +7,39 @@
     <title>Delicias Veganas</title>
     <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
     <link rel="stylesheet" href="./src/css/output.css">
+
+    <style>
+        .animated-container {
+            overflow: hidden;
+            padding-top: 20px;
+            /* Adiciona espaço acima da imagem */
+        }
+
+        .animated-image {
+            display: block;
+            width: 100%;
+            /* Ajusta a largura da imagem conforme necessário */
+            animation: moveUpAndDown 3s ease-in-out infinite;
+        }
+
+        @keyframes moveUpAndDown {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+
 </head>
 
-<body class="bg-zinc-600 text-white">
+<body class="bg-zinc-600 text-white m-0 h-screen">
     <header>
         <nav class="flex items-center justify-between p-4 shadow-md w-full bg-zinc-500 transition-all duration-500">
             <a href="#">
@@ -24,32 +54,39 @@
                         class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Home</a>
                 </li>
                 <li class="nav-item"><a href="#"
-                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">About</a>
+                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Sobre</a>
                 </li>
                 <li class="nav-item"><a href="#"
-                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Menu</a>
+                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Ebook</a>
                 </li>
                 <li class="nav-item"><a href="#"
-                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Contact</a>
+                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Contato</a>
                 </li>
             </ul>
         </nav>
     </header>
     <section class="flex justify-left items-center ml-52">
         <div class="block justify-left items-center">
-            <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas:</span> Sabores do <span
-                    class="text-green-400">Verde</span></h2>
-            <p class="font-bold tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e saudáveis que
+            <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas:</span> Receitas Fáceis e <span
+                    class="text-green-400">Nutritivas</span></h2>
+            <p class="font-bold tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e
+                saudáveis que
                 você nunca <br>
                 experimentou!
                 Este
                 livro é a sua
                 porta de entrada para uma alimentação <br> saborosa e consciente.</p>
             <button
-                class="bg-gray-500 rounded-lg w-52 text-2xl mt-5 h-11 hover:text-green-400 hover:tracking-widest transition-all duration-500">Saiba
+                class="bg-gray-500 text-stone-200 rounded-lg w-52 text-2xl mt-5 h-11 hover:text-green-400 hover:tracking-widest hover:bg-gray-600 hover:w-60 transition-all duration-500">Saiba
                 Mais</button>
         </div>
+        <aside>
+            <div class="w-80 rotate-3 absolute right-52 top-0 mt-44 animated-container">
+                <img src="./src/images/Capa do Ebook DelÍcias Veganas.png" alt="" class="animated-image">
+            </div>
+        </aside>
     </section>
+
 </body>
 
 </html>
