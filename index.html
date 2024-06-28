@@ -7,32 +7,11 @@
     <title>Delicias Veganas</title>
     <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
     <link rel="stylesheet" href="./src/css/output.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('./src/images/vegan-bg.jpg');
-            background-size: cover;
-            filter: blur(10px);
-            z-index: -1;
-        }
-    </style>
 </head>
 
-<body>
+<body class="bg-zinc-600 text-white">
     <header>
-        <nav
-            class="flex items-center justify-between p-4 shadow-md w-full fixed bg-zinc-500 transition-all duration-500">
+        <nav class="flex items-center justify-between p-4 shadow-md w-full bg-zinc-500 transition-all duration-500">
             <a href="#">
                 <h1 class="text-xl font-bold ">
                     <span class="text-green-400 hover:tracking-widest transition-all duration-500">Delicias</span>
@@ -56,7 +35,21 @@
             </ul>
         </nav>
     </header>
-    <div class="background"></div>
+    <section class="flex justify-left items-center ml-52">
+        <div class="block justify-left items-center">
+            <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas:</span> Sabores do <span
+                    class="text-green-400">Verde</span></h2>
+            <p class="font-bold tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e saudáveis que
+                você nunca <br>
+                experimentou!
+                Este
+                livro é a sua
+                porta de entrada para uma alimentação <br> saborosa e consciente.</p>
+            <button
+                class="bg-gray-500 rounded-lg w-52 text-2xl mt-5 h-11 hover:text-green-400 hover:tracking-widest transition-all duration-500">Saiba
+                Mais</button>
+        </div>
+    </section>
 </body>
 
 </html>
