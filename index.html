@@ -61,12 +61,6 @@
             animation: jump 2s ease;
         }
 
-        #promo-timer {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
         .cart {
             filter: invert(80%);
         }
@@ -74,31 +68,30 @@
 
 </head>
 
-<body class="bg-zinc-600 text-white m-0 h-screen overflow-x-hidden">
+<body class="bg-zinc-600 text-white m-0 h-screen w-screen overflow-x-hidden ">
     <header>
         <nav
             class="flex items-center justify-between p-4 shadow-md w-full bg-zinc-500 transition-all duration-500 relative">
             <a href="#">
-                <h1 class="text-xl font-bold ">
+                <h1 class="text-xl font-bold">
                     <span class="text-green-400 hover:tracking-widest transition-all duration-500">Delícias</span>
                     <span class="text-green-400 hover:tracking-widest transition-all duration-500">Veganas</span>
                 </h1>
             </a>
-            <ul class="nav-menu hidden md:flex items-center gap-10">
+            <ul class="nav-menu md:flex items-center gap-10">
                 <li class="nav-item"><a href="#"
                         class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Home</a>
                 </li>
-                <li class="nav-item"><a href="#"
+                <li class="nav-item"><a href="#sobre"
                         class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Sobre</a>
                 </li>
                 <li class="nav-item"><a href="#"
-                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Ebook</a>
+                        class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Avaliações</a>
                 </li>
                 <li class="nav-item"><a href="#"
                         class="text-lg font-medium hover:text-green-400 hover:tracking-widest transition-all duration-500">Contato</a>
                 </li>
             </ul>
-            <div id="promo-timer" class="text-lg font-medium text-white"></div>
         </nav>
     </header>
     <section class="flex justify-left items-center ml-52">
@@ -106,7 +99,7 @@
             <h2 class="text-4xl mt-24"><span class="text-green-400">Delícias Veganas<span
                         class="text-white">:</span></span> Receitas Fáceis e <span
                     class="text-green-400">Nutritivas</span></h2>
-            <p class="font-bold tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e
+            <p class="tracking-wide text-xl">Descubra as receitas veganas mais deliciosas e
                 saudáveis que
                 você nunca <br>
                 experimentou!
@@ -117,8 +110,9 @@
                 class="bg-gray-500 text-stone-200 rounded-lg w-52 text-2xl mt-5 h-11 hover:text-green-400 hover:tracking-widest hover:bg-gray-600 hover:w-60 transition-all duration-500">Quero
                 Aprender</button>
             <div class="w-52 mt-28 mb-14">
-                <p class="text-green-400" id="number">00</p>
-                <div class="flex delay-[1000ms] duration-[600ms] taos:translate-y-[-20px] taos:opacity-0">
+                <p class="text-green-400 delay-[500ms] duration-[600ms] taos:translate-y-[20px] taos:opacity-0"
+                    id="number">00</p>
+                <div class="flex delay-[30ms] duration-[600ms] taos:translate-y-[20px] taos:opacity-0">
                     <img class="cart" src="./src/images/sold.png" alt="">
                 </div>
             </div>
@@ -133,19 +127,72 @@
         </aside>
     </section>
     <section class="flex justify-center items-center ">
-        <button><a href=""><img
+        <button><a href="#sobre"><img
                     class="bg-gray-500 rounded-lg animate-bounce hover:bg-gray-400 transition-all duration-300"
                     src="./src/images/Down arrow.png" alt=""></a></button>
     </section>
     <hr class="mt-3">
-    <section>
-        <p class="text-4xl ml-52 text-green-400 mt-8 ">Sobre o Ebook<span class="text-white">:</span></p>
-        <div class="ml-52 mt-4 text-2xl">
-            <p></p>
+    <section id="sobre" class="flex justify-center items-center">
+        <div>
+            <h2 class="text-4xl ml-52 text-green-400 mt-8 ">Sobre o Ebook<span class="text-white">:</span></h2>
 
+            <p class="mt-4 text-lg text-center max-w-2xl">
+                "Delícias Veganas: Receitas Fáceis e Nutritivas" é mais do que um simples livro de receitas.<br>
+                Neste ebook, você encontrará uma variedade de pratos inovadores e deliciosos, todos 100% veganos,
+                cuidadosamente elaborados para serem nutritivos e saborosos.<br>
+                <br>
+                <span class="font-bold text-2xl text-green-400">O que terá no Ebook<span
+                        class="text-white">:</span></span><br>
+                - Receitas de café da manhã, almoço, jantar e sobremesas<br>
+                - Dicas de ingredientes e substituições saudáveis<br>
+                - Passo a passo detalhado para cada receita<br>
+                <br>
+                <span class="font-bold text-xl text-green-400">Por que você precisa dele<span
+                        class="text-white">:</span></span><br>
+                - Descubra novas maneiras de preparar suas refeições favoritas de forma saudável e sustentável<br>
+                - Aprenda a criar pratos que impressionarão seus amigos e familiares<br>
+                - Aproveite uma alimentação rica em nutrientes, sem abrir mão do sabor<br>
+            </p>
         </div>
-
     </section>
+    <hr class="mt-5">
+    <section id="depoimentos"
+        class="bg-gray-900 py-12 delay-[300ms] duration-[600ms] taos:translate-y-[-200px] taos:opacity-0"
+        data-taos-offset="500">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-green-400 text-4xl mt-12">Depoimentos<span class="text-white">:</span></h2>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8 mt-40">
+                <!-- Depoimento 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg max-w-xs">
+                    <div id="randomp1" class="flex justify-center">
+                        <img src="./src/images/randomp1.png" alt="" class=" rounded-full">
+                    </div>
+                    <p class="text-center text-2xl text-green-400">Mariana Silva<span class="text-white">:</span></p>
+                    <p class="text-white mb-4 text-center">“As receitas do ebook são maravilhosas! Fiquei encantada com
+                        a variedade
+                        e a facilidade de preparo. É um ótimo recurso para quem quer se alimentar de forma saudável e
+                        deliciosa!”</p>
+
+                    <div class="flex justify-center space-x-1">
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/star--v1.png"
+                            alt="star--v1" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/star--v1.png"
+                            alt="star--v1" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/star--v1.png"
+                            alt="star--v1" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/star--v1.png"
+                            alt="star--v1" />
+                        <img width="30" height="30" src="https://img.icons8.com/ios-filled/50/FFFFFF/star--v1.png"
+                            alt="star--v1" />
+                        <!--<img width="30" height="30"
+                            src="https://img.icons8.com/ios-glyphs/30/FFFFFF/star-half-empty.png"
+                            alt="star-half-empty" /]>-->
+                    </div>
+                </div>
+    </section>
+
 
 
     <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
